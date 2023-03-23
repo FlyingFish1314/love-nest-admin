@@ -80,23 +80,56 @@
   const loading = ref(true)
   const appContainer = ref(null)
   let detail = ref(null)
-  const data = []
-  let obj = `{
-        "id": 1,
-        "name": "未来软件工作室",
-        "nature": "高校内部成立",
-        "members": 0,
-        "username": null,
-        "date": "2022-08-19",
-        "introduction": "学习",
-        "address": "河南科技学院",
-        "idno": "41018220011215",
-        "phoneNumber": "18503871613"
-      }`
-  obj = JSON.parse(obj)
-  for (let i = 0; i < 100; i++) {
-    data.push(obj)
-  }
+  const data = [
+    {
+      id: 1,
+      name: '未来软件工作室',
+      nature: '高校内部成立',
+      members: 58,
+      username: null,
+      date: '2022-08-19',
+      introduction: '日常学习',
+      address: '河南科技学院',
+      idno: '41018220011215',
+      phoneNumber: '18503871613',
+    },
+    {
+      id: 1,
+      name: '爱心服务团',
+      nature: '高校内部成立',
+      members: 10,
+      username: null,
+      date: '2022-11-12',
+      introduction: '公益服务',
+      address: '河南科技学院',
+      idno: '41018220021110',
+      phoneNumber: '18137308817',
+    },
+    {
+      id: 3,
+      name: '日新设',
+      nature: '高校内部成立',
+      members: 13,
+      username: null,
+      date: '2022-11-12',
+      introduction: '社区服务',
+      address: '河南科技学院',
+      idno: '41032820010510',
+      phoneNumber: '13151088234',
+    },
+    {
+      id: 3,
+      name: '善益社',
+      nature: '高校内部成立',
+      members: 6,
+      username: null,
+      date: '2022-11-12',
+      introduction: '公益服务',
+      address: '河南科技学院',
+      idno: '41032720021110',
+      phoneNumber: '18115637767',
+    },
+  ]
   const column = [
     { type: 'selection', width: 60, fixed: 'left' },
     { name: 'name', label: '组织名称', inSearch: true, valueType: 'input', width: 150 },

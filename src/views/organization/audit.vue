@@ -45,7 +45,7 @@
         <el-descriptions-item label="组织类型">校内组织</el-descriptions-item>
         <el-descriptions-item label="联系电话">18503871613</el-descriptions-item>
         <el-descriptions-item label="介绍"
-          >较快拉升的咯技术的就爱看 卡圣诞贺卡大厦酒店了爱看电视教案课件了</el-descriptions-item
+          >乘上幸福智慧号，健康快乐每一天或者：吹响幸福智慧的号角。</el-descriptions-item
         >
         <el-descriptions-item label="地址">河南科技学院</el-descriptions-item>
         <el-descriptions-item label="申请理由">致力于服务学校周边的空巢老人</el-descriptions-item>
@@ -86,24 +86,49 @@
   import type { FormInstance } from 'element-plus'
   const loading = ref(true)
   const appContainer = ref(null)
-  const data = []
-  let obj = `{
-        "id": 3,
-        "name": "河南科技学院爱心协会",
-        "nature": "校内组织",
-        "principal": "王箫凯",
-        "phoneNumber": "18503871613",
-        "introduction": "较快拉升的咯技术的就爱看 卡圣诞贺卡大厦酒店了爱看电视教案课件了",
-        "address": "河南科技学院",
-        "reason": "致力于服务学校周边的空巢老人",
-        "idno": "410182200112150752",
-        "applicationLetter": "11",
-        "state":"0"
-      }`
-  obj = JSON.parse(obj)
-  for (let i = 0; i < 100; i++) {
-    data.push(obj)
-  }
+  const data = [
+    {
+      id: 3,
+      name: '河南科技学院爱心协会',
+      nature: '校内组织',
+      principal: '王箫凯',
+      phoneNumber: '18503871613',
+      introduction: '较快拉升的咯技术的就爱看 卡圣诞贺卡大厦酒店了爱看电视教案课件了',
+      address: '河南科技学院',
+      reason: '致力于服务学校周边的空巢老人',
+      idno: '410182200112150752',
+      applicationLetter: '11',
+      state: '0',
+    },
+    {
+      id: 3,
+      name: '爱益启',
+      nature: '校内组织',
+      principal: '许明',
+      phoneNumber: '18115637767',
+      introduction:
+        '《爱的奉献》只要人人都献出一点爱世界将变成美好的人间;一点点爱汇聚成大爱的意思。',
+      address: '河南科技学院',
+      reason: '帮助他人，乐于奉献',
+      idno: '410182200012150232',
+      applicationLetter: '11',
+      state: '0',
+    },
+    {
+      id: 3,
+      name: '爱心工社',
+      nature: '校内组织',
+      principal: '秦平',
+      phoneNumber: '18503871613',
+      introduction:
+        '以公益服务为主导，强化社区老少文体活动之功能，体现我们设计活动的趣味性、幸福感、和谐性',
+      address: '河南科技学院',
+      reason: '致力于服务学校周边的空巢老人',
+      idno: '410182200112150752',
+      applicationLetter: '11',
+      state: '0',
+    },
+  ]
   const column = [
     { type: 'selection', width: 60, fixed: 'left' },
     { name: 'name', label: '组织名称', inSearch: true, valueType: 'input', width: 200 },
