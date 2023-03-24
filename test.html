@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="root">
+    <div class="container">
+      <section class="sidebar">
+        <ul class="meun"></ul>
+      </section>
+      <section class="main">
+        <article class="post"></article>
+        <p class="copyright"></p>
+      </section>
+    </div>
+  </div>
+  <script>
+    class Node {
+      constructor(type, className, children) {
+        this.type = type;
+        this.className = className;
+        this.children = children || [];
+      }
+    }
+
+    function traverse (selector) {
+      let queue = [document.querySelector(selector)];
+      while (queue.length > 0) {
+        let node = queue.shift();
+        console.log(node.tagName, "." + node.className);
+        let children = node.children;
+        for (let i = 0; i < children.length; i++) {
+          queue.push(children[i]);
+        }
+      }
+    }
+    // traverse(".root")
+    var recoverTree = function (root) {
+      let pre = null, first = null, second = null;
+      function inorder (node) {
+        if (!node) return;
+        inorder(node.left);
+        if (pre && pre.val > node.val) {
+          if (!first) first = pre;
+          second = node;
+        }
+        pre = node;
+        inorder(node.right);
+      }
+      inorder(root);
+      let temp = first.val;
+      first.val = second.val;
+      second.val = temp;
+      return root;
+    };
+    recoverTree([1, 1, - 1])
+  </script>
+</body>
+
+</html>

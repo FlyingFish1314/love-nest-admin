@@ -24,6 +24,7 @@ import formRouter from './modules/form'
 import functionPageRouter from './modules/functionPage'
 import usersRouter from './modules/user'
 import organizationRouter from './modules/organization'
+import activityRouter from './modules/activity'
 
 // 异步组件
 export const asyncRoutes = [
@@ -40,6 +41,7 @@ export const asyncRoutes = [
   ...systemRouter,
   ...usersRouter,
   ...organizationRouter,
+  ...activityRouter,
 ]
 
 /**

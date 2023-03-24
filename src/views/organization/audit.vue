@@ -234,7 +234,6 @@
     ruleForm.state = row.state
     detail = row
   }
-
   const del = (row) => {
     console.log('row==', row)
     ElMessageBox.confirm('你确定要删除当前组织吗吗?', '温馨提示', {
